@@ -21,4 +21,6 @@ Output: Bounding box data extracted from YOLOv8 detection and segmentation perfo
 ![image](https://github.com/harshadkdandage/yolov8_SAM/assets/47813538/195cc86a-745b-4c87-8fab-5746053da03e)
 ![image](https://github.com/harshadkdandage/yolov8_SAM/assets/47813538/688dfafa-bec9-4ea7-87ca-0ca75f8c8604)
 
-This script can be optimized to visualize the bounding box with segmented objects and saved it on a single image. Individual results are shown in this example for better understanding. 
+This script can be optimized to visualize the bounding box with segmented objects and saved it on a single image with a prediction score as shown in the example below. Individual results are shown in this example for better understanding. 
+
+![cat1_result](https://github.com/harshadkdandage/yolov8_SAM/assets/47813538/c513d79d-b276-48b9-995e-51ce81c2face)

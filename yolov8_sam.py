@@ -42,7 +42,7 @@ from ultralytics import YOLO
 import pickle
 
 #Load the image and masks
-img_path = "D:/WeAglieProject/Images/"
+img_path = "path to your image"
 image = cv2.imread(img_path+'Cat1.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -100,5 +100,3 @@ for boxes in boxes_data:
     plt.axis('off')
     plt.savefig(img_path+'output.png')
     plt.show()
-
-pass

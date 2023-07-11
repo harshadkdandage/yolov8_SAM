@@ -8,8 +8,12 @@ Author: Harshad Dandage
 
 import numpy as np
 import torch
-import matplotlib.pyplot as plt
 import cv2
+import matplotlib, sys
+matplotlib.use('QtAgg')
+
+import matplotlib.pyplot as plt
+from ultralytics import YOLO
 
 
 def show_mask(mask, ax, random_color=False):
@@ -33,16 +37,9 @@ def show_box(box, ax):
     ax.add_patch(plt.Rectangle((x0, y0), w, h, edgecolor='green', facecolor=(0,0,0,0), lw=2))
 
 
-import matplotlib, sys
-import pandas as pd
-matplotlib.use('QtAgg')
-
-import matplotlib.pyplot as plt
-from ultralytics import YOLO
-import pickle
 
 #Load the image and masks
-img_path = "path to your image"
+img_path = "D:/WeAglieProject/Images/"
 image = cv2.imread(img_path+'Cat1.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -72,7 +69,8 @@ from segment_anything import sam_model_registry, SamPredictor
 sam_checkpoint = "sam_vit_h_4b8939.pth"
 model_type = "vit_h"
 # device = "cuda"
-device = "/gpu:0"
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda")
 
 sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
 sam.to(device=device)
@@ -100,3 +98,5 @@ for boxes in boxes_data:
     plt.axis('off')
     plt.savefig(img_path+'output.png')
     plt.show()
+
+pass

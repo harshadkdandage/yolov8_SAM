@@ -2,7 +2,11 @@
 
 This script captures bounding boxes of detected objects using YOLOv8 and the boxe information is used to segment the objects. 
 
-Install ultralytics and segment_anything: pip install ultralytics and pip install segment_anything
+Install ultralytics and segment_anything: 
+
+pip install ultralytics 
+
+pip install segment_anything
 
 Download weights of pre-trained SAM model:  wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 

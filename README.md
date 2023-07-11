@@ -1,4 +1,4 @@
-# yolov8_SAM
+YOLOv8 with Segment Anything Model
 
 This script captures bounding boxes of detected objects using YOLOv8 and the boxe information is used to segment the objects. 
 
